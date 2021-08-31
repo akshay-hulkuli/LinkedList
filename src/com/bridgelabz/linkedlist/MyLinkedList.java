@@ -75,6 +75,28 @@ public class MyLinkedList<K> {
 		insert(tempNode, newNode);
 	}
 	
+	public MyNode<K> delete(K key){
+		MyNode<K> tempNode = this.head;
+		while(tempNode != null) {
+			if(tempNode.getNext().getKey() == key) {
+				MyNode<K> deletedNode = tempNode.getNext();
+				tempNode.setNext(deletedNode.getNext());
+				return deletedNode;
+			}
+			tempNode = tempNode.getNext();
+		}
+		return null;
+	}
+	
+	public int size() {
+		int count = 0;
+		MyNode<K> tempNode = this.head;
+		while(tempNode != null) {
+			count++;
+			tempNode = tempNode.getNext();
+		}
+		return count;
+	}
 	
 	public void display() {
 		MyNode<K> tempNode = this.head;
