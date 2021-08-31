@@ -14,11 +14,7 @@ public class LinkedListMain {
 		System.out.println("Created a linked list :");
 		myLinkedList.display();
 		
-		System.out.println("popped element is : "+myLinkedList.popLast().getKey() );
-		
-		System.out.println("modified linked list :");
-		myLinkedList.display();
-		
+		System.out.println("element 30 is found at position : "+myLinkedList.search(30) );
 		
 	}
 }
