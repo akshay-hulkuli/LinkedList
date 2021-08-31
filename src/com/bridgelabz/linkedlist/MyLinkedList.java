@@ -41,6 +41,13 @@ public class MyLinkedList<K> {
 		newNode.setNext(tempNode);
 	}
 	
+	public MyNode<K> pop(){
+		MyNode<K> tempNode = this.head;
+		this.head = this.head.getNext();
+		return tempNode;
+	}
+	
+	
 	public void display() {
 		MyNode<K> tempNode = this.head;
 		while(tempNode != null) {
