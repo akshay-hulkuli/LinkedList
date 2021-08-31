@@ -58,6 +58,19 @@ public class MyLinkedList<K> {
 		return tempNode;
 	}
 	
+	public int search(K key) {
+		int pos = 0;
+		MyNode<K> tempNode = this.head;
+		while(tempNode != null) {
+			if(tempNode.getKey() == key) {
+				return pos+1;
+			}
+			tempNode = tempNode.getNext();
+			pos++;
+		}
+		return -1;
+	}
+	
 	
 	public void display() {
 		MyNode<K> tempNode = this.head;
