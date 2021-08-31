@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedlist;
 
-public class MyNode<K> {
+public class MyNode<K extends Comparable <K>> {
 	private K key;
 	private MyNode<K> next;
 	

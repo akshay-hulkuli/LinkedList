@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedlist;
 
-public class MyLinkedList<K> {
+public class MyLinkedList<K extends Comparable<K>> {
 	public MyNode<K> head;
 	public MyNode<K> tail;
 	
@@ -96,6 +96,21 @@ public class MyLinkedList<K> {
 			tempNode = tempNode.getNext();
 		}
 		return count;
+	}
+	
+	public void addInOrder(MyNode<K> newNode) {
+		MyNode<K> tempNode;
+		if(this.head == null || this.head.getKey().compareTo(newNode.getKey())>0) {
+			newNode.setNext(this.head);
+			this.head = newNode;
+		}
+		else {
+			tempNode = this.head;
+			while(tempNode.getNext()!= null && tempNode.getNext().getKey().compareTo(newNode.getKey())<0)
+				tempNode = tempNode.getNext();
+			newNode.setNext(tempNode.getNext());
+			tempNode.setNext(newNode);
+		}
 	}
 	
 	public void display() {
