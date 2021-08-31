@@ -13,8 +13,8 @@ public class LinkedListMain {
 		
 		System.out.println("Created a linked list :");
 		myLinkedList.display();
-		
-		System.out.println("element 30 is found at position : "+myLinkedList.search(30) );
-		
+		myLinkedList.searchAndInsert(30, 40);
+		System.out.println("after adding 40 after 30 : ");
+		myLinkedList.display();
 	}
 }
