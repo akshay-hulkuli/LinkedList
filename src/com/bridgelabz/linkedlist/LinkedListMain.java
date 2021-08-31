@@ -8,15 +8,14 @@ public class LinkedListMain {
 		MyNode<Integer> fourthNode = new MyNode<Integer>(70);
 		
 		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
-		myLinkedList.append(firstNode);
-		myLinkedList.append(secondNode);
-		myLinkedList.append(thirdNode);
-		myLinkedList.append(fourthNode);
+		myLinkedList.addInOrder(firstNode);
+		myLinkedList.addInOrder(secondNode);
+		myLinkedList.addInOrder(thirdNode);
+		myLinkedList.addInOrder(fourthNode);
 		
 		System.out.println("Created a linked list :");
 		myLinkedList.display();
-		myLinkedList.delete(40);
-		System.out.println("after deleting 40, size is : "+myLinkedList.size());
+		
 		
 	}
 }
