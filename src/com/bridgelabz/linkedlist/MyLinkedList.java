@@ -22,6 +22,19 @@ public class MyLinkedList<K> {
 		}
 	}
 	
+	public void append(MyNode<K> newNode) {
+		if(head == null) {
+			this.head = newNode;
+		}
+		if(tail == null) {
+			this.tail = newNode;
+		}
+		else {
+			this.tail.setNext(newNode);
+			this.tail = newNode;
+		}
+	}
+	
 	public void display() {
 		MyNode<K> tempNode = this.head;
 		while(tempNode != null) {
