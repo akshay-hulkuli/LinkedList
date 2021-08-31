@@ -8,15 +8,17 @@ public class LinkedListMain {
 		
 		MyLinkedList<Integer> myLinkedList = new MyLinkedList<Integer>();
 		myLinkedList.append(firstNode);
+		myLinkedList.append(secondNode);
 		myLinkedList.append(thirdNode);
 		
 		System.out.println("Created a linked list :");
 		myLinkedList.display();
 		
-		myLinkedList.insert(firstNode, secondNode);
+		System.out.println("popped element is : "+myLinkedList.pop().getKey() );
 		
-		System.out.println("After inserting 30 :");
+		System.out.println("modified linked list :");
 		myLinkedList.display();
+		
 		
 	}
 }
