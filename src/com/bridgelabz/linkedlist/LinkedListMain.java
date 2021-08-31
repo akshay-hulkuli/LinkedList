@@ -14,7 +14,7 @@ public class LinkedListMain {
 		System.out.println("Created a linked list :");
 		myLinkedList.display();
 		
-		System.out.println("popped element is : "+myLinkedList.pop().getKey() );
+		System.out.println("popped element is : "+myLinkedList.popLast().getKey() );
 		
 		System.out.println("modified linked list :");
 		myLinkedList.display();
