@@ -35,6 +35,12 @@ public class MyLinkedList<K> {
 		}
 	}
 	
+	public void insert(MyNode<K> prevNode , MyNode<K> newNode) {
+		MyNode<K> tempNode = prevNode.getNext();
+		prevNode.setNext(newNode);
+		newNode.setNext(tempNode);
+	}
+	
 	public void display() {
 		MyNode<K> tempNode = this.head;
 		while(tempNode != null) {
