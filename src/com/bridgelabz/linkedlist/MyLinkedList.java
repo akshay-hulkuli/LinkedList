@@ -58,17 +58,21 @@ public class MyLinkedList<K> {
 		return tempNode;
 	}
 	
-	public int search(K key) {
-		int pos = 0;
+	public MyNode<K> search(K key) {
 		MyNode<K> tempNode = this.head;
 		while(tempNode != null) {
 			if(tempNode.getKey() == key) {
-				return pos+1;
+				return tempNode;
 			}
 			tempNode = tempNode.getNext();
-			pos++;
 		}
-		return -1;
+		return null;
+	}
+	
+	public void searchAndInsert(K key, K value) {
+		MyNode<K> tempNode = search(key);
+		MyNode<K> newNode = new MyNode<K>(value);
+		insert(tempNode, newNode);
 	}
 	
 	
