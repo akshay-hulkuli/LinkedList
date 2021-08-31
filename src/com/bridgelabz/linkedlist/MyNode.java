@@ -23,4 +23,5 @@ public class MyNode<K extends Comparable <K>> {
 		return this.next;
 	}
 	
+	
 }
